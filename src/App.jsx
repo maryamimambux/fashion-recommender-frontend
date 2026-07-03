@@ -2,7 +2,10 @@ import { useState } from 'react'
 
 // Where the Flask backend is running. If you ever deploy this for real,
 // this is the one line you'd change to point at a live server instead.
-const API_URL = 'http://localhost:5000'
+
+//const API_URL = 'http://localhost:5000'
+// const API_URL = 'https://maryamimambux-fashion-recommender-backend.hf.space'
+const API_URL = import.meta.env.VITE_API_URL
 
 function App() {
   const [file, setFile] = useState(null)
