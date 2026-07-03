@@ -49,9 +49,9 @@ function App() {
   return (
     <div className="page">
       <header className="page-header">
-        <span className="eyebrow">Visual search</span>
-        <h1>Find clothes that look like this</h1>
-        <p>Upload a photo of one item and the catalog will surface the closest visual matches, ranked by similarity.</p>
+        <span className="eyebrow">AI Visual Search</span>
+        <h1>Find fashion that looks like this</h1>
+        <p>Upload a photo of any fashion item — clothing, bags, shoes, or accessories — and see the closest visual matches from the catalog.</p>
       </header>
 
       <section className="upload-card">
@@ -98,7 +98,50 @@ function App() {
           </div>
         </section>
       )}
+
+    <footer className="site-footer">
+      <p>© {new Date().getFullYear()} Maryam Imam. All rights reserved.</p>
+      <p className="footer-links">
+        <a href="https://www.linkedin.com/in/maryam-imam-394455342/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span> · </span>
+        <a href="mailto:maryamimambux@gmail.com">Email</a>
+        <span> · </span>
+        <a href="https://github.com/maryamimambux" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </footer>
+
+    <style>{`
+      .page {
+        padding-bottom: 70px; /* keeps content from hiding behind the fixed footer */
+      }
+      .site-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        border-top: 1px solid #e5e5e5;
+        padding: 10px 16px;
+        text-align: center;
+        font-size: 13px;
+        color: #555;
+        z-index: 100;
+      }
+      .site-footer a {
+        color: #4b5fd1;
+        text-decoration: none;
+      }
+      .site-footer a:hover {
+        text-decoration: underline;
+      }
+      .footer-links {
+        margin-top: 2px;
+      }
+    `}
+    </style>
+    
     </div>
+    
   )
 }
 
